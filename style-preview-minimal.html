@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaBrew Style Preview — Minimal</title>
+    <style>
+      :root {
+        --bg: #f5f0e7;
+        --paper: #fffdf8;
+        --ink: #2a221c;
+        --muted: #7f6d5d;
+        --line: #d9cbbd;
+        --accent: #8f5d3b;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        background:
+          radial-gradient(circle at top left, rgba(143,93,59,0.10), transparent 28%),
+          linear-gradient(180deg, #f8f2e9 0%, var(--bg) 100%);
+        color: var(--ink);
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 32px;
+      }
+      .card {
+        width: min(760px, 100%);
+        background: rgba(255,253,248,0.94);
+        border: 1px solid rgba(217,203,189,0.8);
+        border-radius: 28px;
+        box-shadow: 0 24px 70px rgba(77, 57, 43, 0.12);
+        padding: 40px;
+        backdrop-filter: blur(8px);
+      }
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font: 600 12px/1.2 Helvetica, Arial, sans-serif;
+        color: var(--muted);
+        margin-bottom: 18px;
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(2rem, 4vw, 3.25rem);
+        line-height: 1;
+        font-weight: 600;
+      }
+      p {
+        margin: 0 0 28px;
+        color: var(--muted);
+        font: 400 1rem/1.6 Helvetica, Arial, sans-serif;
+        max-width: 56ch;
+      }
+      .option {
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 18px 20px;
+        margin-bottom: 14px;
+        background: rgba(255,255,255,0.75);
+        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+        cursor: pointer;
+      }
+      .option:hover {
+        transform: translateY(-2px);
+        border-color: var(--accent);
+        box-shadow: 0 12px 30px rgba(143,93,59,0.10);
+      }
+      .option strong {
+        display: block;
+        font: 600 1rem/1.3 Helvetica, Arial, sans-serif;
+        color: var(--ink);
+        margin-bottom: 6px;
+      }
+      .option span {
+        font: 400 0.96rem/1.5 Helvetica, Arial, sans-serif;
+        color: var(--muted);
+      }
+      .footer {
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: 500 0.9rem/1.4 Helvetica, Arial, sans-serif;
+        color: var(--muted);
+      }
+      .progress {
+        width: 180px;
+        height: 8px;
+        background: rgba(217,203,189,0.7);
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .progress::after {
+        content: "";
+        display: block;
+        width: 45%;
+        height: 100%;
+        background: linear-gradient(90deg, #a66c43, #d39b71);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="eyebrow">NovaBrew Taste Profile</div>
+      <h1>Which atmosphere feels most like your perfect cup?</h1>
+      <p>
+        Choose the scene that feels most natural to you. This version is calm, airy, and editorial,
+        designed to feel like a premium coffee journal rather than a loud internet quiz.
+      </p>
+      <div class="option">
+        <strong>Quiet mountain morning</strong>
+        <span>Crisp air, focused energy, and a cup with serious presence.</span>
+      </div>
+      <div class="option">
+        <strong>Sunlit corner table</strong>
+        <span>Warm conversation, balance, and something you can drink every day.</span>
+      </div>
+      <div class="option">
+        <strong>Soft blanket and a rainy window</strong>
+        <span>Comfort, familiarity, and a slow, cozy ritual.</span>
+      </div>
+      <div class="option">
+        <strong>Late-night gallery opening</strong>
+        <span>Unexpected, expressive, and a little bit thrilling.</span>
+      </div>
+      <div class="footer">
+        <span>Question 3 of 7</span>
+        <div class="progress"></div>
+      </div>
+    </main>
+  </body>
+</html>

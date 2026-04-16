@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaBrew Style Preview — Playful</title>
+    <style>
+      :root {
+        --bg: #fff4e8;
+        --pink: #f3a9a1;
+        --cream: #fff9f2;
+        --orange: #ff9c57;
+        --yellow: #ffd36f;
+        --ink: #3d2a23;
+        --muted: #7c5b4c;
+        --teal: #83c6b6;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+        background:
+          radial-gradient(circle at top right, rgba(255,211,111,0.55), transparent 28%),
+          radial-gradient(circle at bottom left, rgba(131,198,182,0.35), transparent 24%),
+          linear-gradient(180deg, #fff7ee 0%, var(--bg) 100%);
+        color: var(--ink);
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      .card {
+        width: min(780px, 100%);
+        background: var(--cream);
+        border-radius: 36px;
+        padding: 34px;
+        box-shadow: 0 28px 70px rgba(170, 108, 74, 0.16);
+        border: 3px solid rgba(255,255,255,0.7);
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+      .badge {
+        background: #fff;
+        border-radius: 999px;
+        padding: 10px 14px;
+        font-weight: 700;
+        color: var(--muted);
+        box-shadow: inset 0 0 0 2px rgba(243,169,161,0.35);
+      }
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.05;
+      }
+      p {
+        margin: 0 0 24px;
+        color: var(--muted);
+        line-height: 1.6;
+        max-width: 55ch;
+      }
+      .option {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        background: #fff;
+        padding: 16px 18px;
+        border-radius: 22px;
+        margin-bottom: 14px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: transform 160ms ease, border-color 160ms ease;
+      }
+      .option:hover {
+        transform: scale(1.01);
+        border-color: rgba(255,156,87,0.55);
+      }
+      .icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 18px;
+        display: grid;
+        place-items: center;
+        font-size: 1.6rem;
+        flex: 0 0 auto;
+      }
+      .option:nth-child(1) .icon { background: rgba(255,211,111,0.45); }
+      .option:nth-child(2) .icon { background: rgba(131,198,182,0.35); }
+      .option:nth-child(3) .icon { background: rgba(243,169,161,0.32); }
+      .option:nth-child(4) .icon { background: rgba(255,156,87,0.25); }
+      .text strong {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 1rem;
+      }
+      .text span {
+        color: var(--muted);
+        line-height: 1.45;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 24px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .dots {
+        display: flex;
+        gap: 8px;
+      }
+      .dots span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(124,91,76,0.2);
+      }
+      .dots span:nth-child(-n+3) { background: var(--orange); }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="top">
+        <div class="badge">NovaBrew Quiz Preview</div>
+        <div class="badge">Fun + Friendly</div>
+      </div>
+      <h1>Pick the scene that feels the most like your ideal coffee mood.</h1>
+      <p>
+        This direction is more inviting and social. It feels easy, warm, and internet-friendly,
+        like a premium brand that still wants the quiz to be playful and shareable.
+      </p>
+      <div class="option">
+        <div class="icon">🌋</div>
+        <div class="text">
+          <strong>Something intense, dramatic, and unforgettable</strong>
+          <span>You like flavor with confidence and a little edge.</span>
+        </div>
+      </div>
+      <div class="option">
+        <div class="icon">🌞</div>
+        <div class="text">
+          <strong>Easy sunlight, great conversation, no chaos</strong>
+          <span>You want balance, warmth, and something polished.</span>
+        </div>
+      </div>
+      <div class="option">
+        <div class="icon">🛋️</div>
+        <div class="text">
+          <strong>A blanket, a novel, and nowhere to be</strong>
+          <span>You want your coffee to feel like comfort.</span>
+        </div>
+      </div>
+      <div class="option">
+        <div class="icon">🎨</div>
+        <div class="text">
+          <strong>A choice you have never seen before and want to try immediately</strong>
+          <span>You love novelty, surprise, and the thrill of discovery.</span>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Question 2 of 7</span>
+        <div class="dots"><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+    </main>
+  </body>
+</html>
